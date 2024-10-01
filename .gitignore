@@ -35,3 +35,8 @@ build/
 
 # nix
 result
+
+# jupyter
+.ipynb_checkpoints
+notebook/*.rs
+NoteBook/.tmp*

@@ -12,6 +12,13 @@
       let
         overlays = [ (import rust-overlay) ];
         pkgs = import nixpkgs { inherit system overlays; };
+        DevPython = pkgs.python3.withPackages (ps:
+          with ps; [
+            # Development-only packages
+            jupyterlab
+            ipywidgets
+            notebook
+          ]);
       in {
         devShells.default = with pkgs;
           mkShell {
@@ -19,6 +26,8 @@
               openssl
               pkg-config
               fd
+              evcxr
+              DevPython
               (rust-bin.beta.latest.default.override {
                 extensions = [ "rust-src" "rust-analyzer" ];
               })
