@@ -15,8 +15,14 @@
       in {
         devShells.default = with pkgs;
           mkShell {
-            buildInputs =
-              [ openssl pkg-config  fd rust-bin.beta.latest.default ];
+            buildInputs = [
+              openssl
+              pkg-config
+              fd
+              (rust-bin.beta.latest.default.override {
+                extensions = [ "rust-src" "rust-analyzer" ];
+              })
+            ];
 
             # Setting up the environment variables you need during
             # development.
