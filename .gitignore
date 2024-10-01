@@ -39,4 +39,4 @@ result
 # jupyter
 .ipynb_checkpoints
 notebook/*.rs
-NoteBook/.tmp*
+notebook/.tmp*
