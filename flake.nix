@@ -18,6 +18,12 @@
             jupyterlab
             ipywidgets
             notebook
+            pandas
+            numpy
+            matplotlib
+            plotly
+            xlrd
+            openpyxl
           ]);
       in {
         devShells.default = with pkgs;

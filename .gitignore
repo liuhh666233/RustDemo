@@ -40,3 +40,4 @@ result
 .ipynb_checkpoints
 notebook/*.rs
 notebook/.tmp*
+notebook/*.xlsx
