@@ -41,3 +41,6 @@ result
 notebook/*.rs
 notebook/.tmp*
 notebook/*.xlsx
+
+# test data
+*.txt
